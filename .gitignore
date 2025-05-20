@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment variables or secrets
+.env
+*.env
+
+# macOS system files
+.DS_Store
+
+# Logs or temp files
+*.log
+*.tmp
+
+# Test or debug artifacts
+coverage/
+.pytest_cache/
+*.cover
+*.log
+
+# Compiled C extensions
+*.so
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
