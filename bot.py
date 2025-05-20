@@ -42,12 +42,12 @@ def get_gold_price(api_key):
         return "خطا در دریافت قیمت طلا"
 
 # Schedule to run daily at 10:00 AM
-# schedule.every().day.at("10:00").do(send_daily_sms)
+schedule.every().day.at("10:00").do(send_daily_sms)
 # For testing purposes (send every 10 seconds):
-schedule.every(10).seconds.do(send_daily_sms)
+# schedule.every(10).seconds.do(send_daily_sms)
 
 print("Script is running... Waiting for scheduled tasks.")
 
 while True:
     schedule.run_pending()
-    #time.sleep(60)
+    time.sleep(60)
