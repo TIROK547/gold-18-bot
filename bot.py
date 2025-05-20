@@ -35,17 +35,19 @@ def get_gold_price(api_key):
         except (ValueError, TypeError):
             gold_value = "نامشخص"
 
-        gold_text = f"قیمت طلای ۱۸ عیار:\n💵 {gold_value} تومان"
+        gold_text = f"قیمت گرم طلای ۱۸ عیار:\n💵 {gold_value} تومان"
         return gold_text
     except Exception as e:
         print(f"Error fetching gold price: {e}")
         return "خطا در دریافت قیمت طلا"
 
 # Schedule to run daily at 10:00 AM
-schedule.every().day.at("10:00").do(send_daily_sms)
+# schedule.every().day.at("10:00").do(send_daily_sms)
+# For testing purposes (send every 10 seconds):
+schedule.every(10).seconds.do(send_daily_sms)
 
 print("Script is running... Waiting for scheduled tasks.")
 
 while True:
     schedule.run_pending()
-    time.sleep(60)
+    #time.sleep(60)
